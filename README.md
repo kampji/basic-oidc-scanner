@@ -1,4 +1,4 @@
-# basic-oidc-scanner.py
+# basic_oidc_scanner.py
 
 A lightweight, unauthenticated vulnerability scanner for public OpenID Connect (OIDC) / OAuth 2.0 providers.
 
