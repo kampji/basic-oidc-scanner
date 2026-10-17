@@ -1,4 +1,4 @@
-# basic-oidc-scanner
+# basic-oidc-scanner.py
 
 A lightweight, unauthenticated vulnerability scanner for public OpenID Connect (OIDC) / OAuth 2.0 providers.
 
@@ -44,8 +44,8 @@ Every tier is unauthenticated. You choose how much traffic hits the target.
 
 | Mode | What it sends |
 |---|---|
-| **Default** | GET the discovery document and the JWKS, plus one TLS handshake. Nothing is written to the target. |
-| `--probe` | Also GETs each advertised endpoint and `/.well-known/webfinger`. Read-only. |
+| **Default** | GET the discovery document and the JWKS, plus one TLS handshake. |
+| `--probe` | Also GETs each advertised endpoint and `/.well-known/webfinger`. |
 | `--dynamic-reg-probe` | **Intrusive.** One POST to the registration endpoint to test anonymous client registration. Requires `--probe`. If it succeeds, ask the target to remove the `basic_oidc_scanner-probe` client. |
 
 If `openid-configuration` isn't found, it falls back to the RFC 8414 `oauth-authorization-server` locations.
